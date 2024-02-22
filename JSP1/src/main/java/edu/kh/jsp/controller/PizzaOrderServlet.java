@@ -16,17 +16,19 @@ public class PizzaOrderServlet extends HttpServlet{
 	
 	// POST 방식 : form(POST), JS(ajax/REST API)
 	
-	// a태그 요청 == GET 방식
+	
+	// a태그 요청 ==  GET 방식
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		// JSP로 요청 위임되는 HttpServletRequest 객체에
-		// 임의 값을 추가하기!!
+		// 임의의 값을 추가하기!!
 		
-		String myName ="간장";
+		String myName = "백동현";
 		
-		// Attribute(속성)== 객체의 속성 == 변수(필드)
+		// Attribute(속성) == 객체의 속성 == 변수(필드)
 		req.setAttribute("myName", myName);
+		
 		
 		
 		// pizza_order.jsp가 응답 화면을 대신 만들어 출력할 수 있도록
@@ -41,12 +43,12 @@ public class PizzaOrderServlet extends HttpServlet{
 		
 		// 요청 위임
 		dispatcher.forward(req, resp);
-		
 	}
+	
 	
 	/* 요청 주소가 같아도 method가 GET/POST로 다른 경우
 	 * 따로 처리하는 코드를 작성할 수 있다!!!
-	 * */
+	 *  */
 	
 	// 피자 주문 페이지 요청 처리(POST 방식)
 	@Override
@@ -78,15 +80,21 @@ public class PizzaOrderServlet extends HttpServlet{
 		req.setAttribute("pizzaName", pizzaName);
 		req.setAttribute("price", price);
 		
+		
 		// 요청 위임할 JSP 경로 지정
 		String path = "/WEB-INF/views/order_result.jsp";
 		
-		// 요청 발송자를 이용해 JSP 지정 + 요청 위임
+		// 요청 발송자를 이용해서 JSP 지정 + 요청 위임
 		RequestDispatcher dispatcher = req.getRequestDispatcher(path);
 		dispatcher.forward(req, resp);
-		
-		
 	}
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }
