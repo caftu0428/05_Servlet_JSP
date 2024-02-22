@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>검색 결과</title>
 </head>
 <body>
- 	<h1>jsp파일도 html처럼 주소에 파일 경로 잘쓰면 이동 가능</h1>
+	<h1>${requestScope.searchMessage}</h1>
 </body>
 </html>
