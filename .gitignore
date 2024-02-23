@@ -100,3 +100,9 @@ replay_pid*
 000_연습/
 프로그래밍언어활용_3차/src/edu/kh/test3/Member.java
 프로그래밍언어활용_3차/src/edu/kh/test3/Test3.java
+NetworkTest1/.gitignore
+NetworkTest1/src/main/java/edu/kh/test/controller/JoinServlet.java
+NetworkTest1/src/main/java/edu/kh/test/model/dto/Member.java
+NetworkTest1/src/main/webapp/index.jsp
+NetworkTest1/src/main/webapp/META-INF/MANIFEST.MF
+NetworkTest1/src/main/webapp/WEB-INF/views/success.jsp
